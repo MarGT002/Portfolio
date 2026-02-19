@@ -1,0 +1,365 @@
+/* ==============================================
+   CUSTOM THEME - Mario García Terrazas
+   Verde Esmeralda + Azul Rey con Modo Oscuro/Claro
+   ============================================== */
+
+/* Variables para Modo Claro (por defecto) */
+:root {
+  /* Colores principales */
+  --primary-green: #50C878;      /* Verde esmeralda */
+  --primary-blue: #4169E1;       /* Azul rey */
+  --accent-teal: #20B2AA;        /* Turquesa complementario */
+  --accent-gold: #FFD700;        /* Dorado para acentos */
+  
+  /* Modo Claro */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-card: #FFFFFF;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-color: #E2E8F0;
+  --shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Actualizar variables del template original */
+  --background-color: var(--bg-primary);
+  --default-color: var(--text-primary);
+  --heading-color: var(--text-primary);
+  --accent-color: var(--primary-green);
+  --surface-color: var(--bg-secondary);
+}
+
+/* Variables para Modo Oscuro */
+body.dark-mode {
+  /* Modo Oscuro */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-card: #242424;
+  --text-primary: #f7fafc;
+  --text-secondary: #cbd5e0;
+  --text-muted: #a0aec0;
+  --border-color: #3a3a3a;
+  --shadow: rgba(0, 0, 0, 0.3);
+  
+  /* Actualizar variables del template original para modo oscuro */
+  --background-color: var(--bg-primary);
+  --default-color: var(--text-primary);
+  --heading-color: var(--text-primary);
+  --accent-color: var(--primary-green);
+  --surface-color: var(--bg-secondary);
+  --contrast-color: #ffffff;
+}
+
+/* Toggle Switch para Modo Oscuro */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 50px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.theme-toggle i {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+.theme-toggle .sun-icon {
+  display: none;
+}
+
+body.dark-mode .theme-toggle .sun-icon {
+  display: block;
+}
+
+body.dark-mode .theme-toggle .moon-icon {
+  display: none;
+}
+
+/* Aplicar colores principales */
+.accent-text,
+.btn-primary,
+.portfolio-filters li.filter-active,
+.service-card:hover .service-icon i {
+  color: var(--primary-green) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  border: none;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--primary-green);
+  color: white;
+}
+
+/* Headers con gradiente */
+.section-title h2::after {
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+}
+
+/* Progress bars con gradiente */
+.progress-bar {
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-blue)) !important;
+}
+
+/* Social links con colores */
+.social-links a:hover {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  color: white;
+}
+
+/* Cards y superficies */
+.profile-card,
+.info-box,
+.contact-form,
+.service-card,
+.resume-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Transición suave para el cambio de tema */
+body,
+.header,
+.profile-card,
+.service-card,
+.portfolio-wrap,
+.contact-form {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ajustes para modo oscuro en header lateral */
+body.dark-mode .header {
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+}
+
+/* Portfolio items en modo oscuro */
+body.dark-mode .portfolio-info {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Stats con gradiente */
+.stats-item:hover {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--primary-green), transparent 90%),
+    color-mix(in srgb, var(--primary-blue), transparent 90%));
+}
+
+/* Botón de descarga CV */
+.download-cv-btn {
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(65, 105, 225, 0.3);
+  color: white;
+}
+
+.download-cv-btn i {
+  font-size: 18px;
+}
+
+/* Sección "Actualmente Aprendiendo" */
+.learning-section {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--primary-green), transparent 95%),
+    color-mix(in srgb, var(--primary-blue), transparent 95%));
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid var(--border-color);
+  margin-top: 30px;
+}
+
+.learning-section h3 {
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.learning-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.learning-tag {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.learning-tag i {
+  font-size: 12px;
+}
+
+/* Idiomas badges */
+.languages-section {
+  margin-top: 20px;
+}
+
+.language-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(65, 105, 225, 0.2);
+}
+
+/* Sección detallada del proyecto */
+.project-detail-section {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.project-detail-section h3 {
+  color: var(--primary-green);
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-item {
+  padding: 20px;
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--primary-green), transparent 95%),
+    color-mix(in srgb, var(--primary-blue), transparent 95%));
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.feature-item h4 {
+  color: var(--primary-blue);
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-item p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 14px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech-badge {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Links solo con iconos */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.icon-link:hover {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  color: white;
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+  }
+  
+  .project-detail-section {
+    padding: 25px;
+  }
+  
+  .project-features {
+    grid-template-columns: 1fr;
+  }
+}

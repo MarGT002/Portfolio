@@ -26,6 +26,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <!-- Custom Theme CSS -->
+  <link href="assets/css/custom-theme.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: SnapFolio
@@ -37,6 +40,12 @@
 </head>
 
 <body class="index-page">
+
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+    <i class="bi bi-moon-fill moon-icon"></i>
+    <i class="bi bi-sun-fill sun-icon"></i>
+  </div>
 
   <header id="header" class="header dark-background d-flex flex-column justify-content-center">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -54,8 +63,8 @@
       </nav>
 
       <div class="social-links text-center">
-        <a href="https://github.com/MarGT002" target="_blank" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/MarGT002" target="_blank" class="icon-link" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank" class="icon-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -90,8 +99,8 @@
                 </div>
 
                 <div class="social-links">
-                  <a href="https://github.com/MarGT002" target="_blank"><i class="bi bi-github"></i></a>
-                  <a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://github.com/MarGT002" target="_blank" class="icon-link" title="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank" class="icon-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -133,14 +142,21 @@
                 <p class="profession">Desarrollador Web &amp; Administrador de Redes</p>
 
                 <div class="contact-links">
-                  <a href="mailto:#####@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    ############@gmail.com
+                  <a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank" class="contact-item">
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn
                   </a>
-                  <a href="#" class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    América
+                  <a href="https://github.com/MarGT002" target="_blank" class="contact-item">
+                    <i class="bi bi-github"></i>
+                    GitHub
                   </a>
+                </div>
+                
+                <!-- Idiomas -->
+                <div class="languages-section">
+                  <h4 style="font-size: 16px; margin-top: 20px; margin-bottom: 10px; color: var(--text-primary);">Idiomas</h4>
+                  <span class="language-badge">Español - Nativo</span>
+                  <span class="language-badge">Inglés - Intermedio</span>
                 </div>
               </div>
             </div>
@@ -207,6 +223,25 @@
                   Ver Proyectos
                 </a>
               </div>
+              
+              <!-- Actualmente Aprendiendo -->
+              <div class="learning-section">
+                <h3><i class="bi bi-book"></i> Actualmente Aprendiendo</h3>
+                <div class="learning-tags">
+                  <span class="learning-tag">
+                    <i class="bi bi-code-slash"></i> React.js
+                  </span>
+                  <span class="learning-tag">
+                    <i class="bi bi-server"></i> Node.js
+                  </span>
+                  <span class="learning-tag">
+                    <i class="bi bi-cloud"></i> AWS Certified Solutions Architect
+                  </span>
+                  <span class="learning-tag">
+                    <i class="bi bi-shield-check"></i> Ciberseguridad
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -266,9 +301,9 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Desarrollo Web</h3>
+              <h3>Frontend</h3>
               <div class="skills-animation">
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
@@ -294,6 +329,24 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
+                    <h4>Bootstrap</h4>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Framework CSS para diseños responsivos</div>
+                </div>
+              </div>
+            </div><!-- End Frontend Skills -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+              <h3>Backend</h3>
+              <div class="skills-animation">
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
                     <h4>Python</h4>
                     <span class="skill-percentage">65%</span>
                   </div>
@@ -302,23 +355,16 @@
                   </div>
                   <div class="skill-tooltip">Desarrollo backend y automatización de procesos</div>
                 </div>
-              </div>
-            </div><!-- End Frontend Skills -->
-          </div>
 
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Infraestructura & Bases de Datos</h3>
-              <div class="skills-animation">
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4>Redes Cisco</h4>
-                    <span class="skill-percentage">85%</span>
+                    <h4>Node.js</h4>
+                    <span class="skill-percentage">60%</span>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Configuración y administración de equipos Cisco, diseño de redes</div>
+                  <div class="skill-tooltip">Desarrollo de APIs y servicios backend</div>
                 </div>
 
                 <div class="skill-item">
@@ -329,7 +375,25 @@
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Diseño de bases de datos, optimización y consultas complejas</div>
+                  <div class="skill-tooltip">Diseño de bases de datos y consultas complejas</div>
+                </div>
+              </div>
+            </div><!-- End Backend Skills -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
+              <h3>Infraestructura</h3>
+              <div class="skills-animation">
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Redes Cisco</h4>
+                    <span class="skill-percentage">85%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Configuración y administración de equipos Cisco</div>
                 </div>
 
                 <div class="skill-item">
@@ -341,6 +405,21 @@
                     <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <div class="skill-tooltip">Despliegue y gestión de aplicaciones en la nube</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Linux/Windows Server</h4>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Administración de servidores y sistemas operativos</div>
+                </div>
+              </div>
+            </div><!-- End Infrastructure Skills -->
+          </div>
                 </div>
               </div>
             </div><!-- End Backend Skills -->
@@ -375,8 +454,6 @@
 
               <h3 class="mt-4">Información de Contacto</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> América</li>
-                <li><i class="bi bi-envelope"></i> ########@gmail.com</li>
                 <li><i class="bi bi-linkedin"></i> linkedin.com/in/mario-garcía-terrazas</li>
                 <li><i class="bi bi-github"></i> github.com/MarGT002</li>
               </ul>
@@ -447,13 +524,57 @@
               <div class="resume-item">
                 <h4>Proyecto: Sistema Analizador Contable</h4>
                 <h5>Desarrollo Reciente</h5>
-                <p class="company"><i class="bi bi-code-square"></i> Solución Personalizada</p>
+                <p class="company"><i class="bi bi-code-square"></i> Solución Personalizada para Cliente Empresarial</p>
                 <ul>
-                  <li>Automatización de procesos contables: análisis de cuentas, amarres y auxiliares contables</li>
-                  <li>Desarrollo de módulos para libros diarios automatizados</li>
-                  <li>Reducción significativa de tiempos de procesamiento (de horas/días a minutos)</li>
-                  <li>Tecnologías: HTML/CSS/JavaScript</li>
+                  <li>Automatización integral de procesos contables complejos</li>
+                  <li>Procesamiento de múltiples archivos Excel simultáneos</li>
+                  <li>Generación automática de reportes con formato personalizado</li>
+                  <li>Reducción de tiempos operativos de días/horas a minutos</li>
+                  <li>Interfaz web intuitiva sin necesidad de instalación</li>
+                  <li>Sistema sin base de datos: cero almacenamiento de información sensible</li>
                 </ul>
+              </div>
+              
+              <!-- Proyecto Detallado -->
+              <div class="project-detail-section">
+                <h3><i class="bi bi-diagram-3"></i> Financial View - Analizador Contable Web</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                  Aplicación web especializada para el análisis y generación automática de reportes contables. Diseñada para procesar grandes volúmenes de datos financieros y presentarlos en formatos estandarizados para la toma de decisiones empresariales.
+                </p>
+                
+                <div class="project-features">
+                  <div class="feature-item">
+                    <h4><i class="bi bi-file-earmark-excel"></i> Procesamiento Excel</h4>
+                    <p>Carga y análisis de múltiples archivos (Libro + Auxiliar) con validación automática de datos y extracción inteligente de información clave.</p>
+                  </div>
+                  
+                  <div class="feature-item">
+                    <h4><i class="bi bi-table"></i> Generación de Reportes</h4>
+                    <p>Creación automática de 6 tablas contables con clasificación por tipo de operación, sucursal y categoría de cuenta.</p>
+                  </div>
+                  
+                  <div class="feature-item">
+                    <h4><i class="bi bi-shield-check"></i> Seguridad & Privacidad</h4>
+                    <p>Sin base de datos ni almacenamiento: todos los archivos se procesan en memoria y se descartan inmediatamente después.</p>
+                  </div>
+                  
+                  <div class="feature-item">
+                    <h4><i class="bi bi-download"></i> Exportación Personalizada</h4>
+                    <p>Descarga de resultados en formato Excel con estilos profesionales predefinidos según especificaciones del cliente.</p>
+                  </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                  <h4 style="color: var(--primary-blue); margin-bottom: 15px;">Stack Tecnológico:</h4>
+                  <div class="tech-stack">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">SheetJS</span>
+                    <span class="tech-badge">Excel Processing</span>
+                    <span class="tech-badge">Responsive Design</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -762,7 +883,7 @@
           <div class="col-lg-5">
             <div class="info-box">
               <h3>Información de Contacto</h3>
-              <p>Estoy disponible para nuevos proyectos y colaboraciones. No dudes en contactarme para discutir tus necesidades tecnológicas.</p>
+              <p>Estoy disponible para nuevos proyectos y colaboraciones. Conéctate conmigo a través de mis redes profesionales.</p>
 
               <div class="info-item">
                 <div class="icon-box">
@@ -770,18 +891,7 @@
                 </div>
                 <div class="content">
                   <h4>Ubicación</h4>
-                  <p>América</p>
-                  <p>América</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email</h4>
-                  <p>#####@gmail.com</p>
+                  <p>Hidalgo, México</p>
                 </div>
               </div>
 
@@ -791,8 +901,18 @@
                 </div>
                 <div class="content">
                   <h4>Redes Profesionales</h4>
-                  <p><a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank">LinkedIn</a></p>
-                  <p><a href="https://github.com/MarGT002" target="_blank">GitHub</a></p>
+                  <p><a href="https://www.linkedin.com/in/mario-garc%C3%ADa-terrazas-84ba7638b/" target="_blank" class="icon-link" style="width: auto; padding: 8px 16px; border-radius: 20px;"><i class="bi bi-linkedin"></i> LinkedIn</a></p>
+                  <p><a href="https://github.com/MarGT002" target="_blank" class="icon-link" style="width: auto; padding: 8px 16px; border-radius: 20px; margin-top: 8px; display: inline-flex;"><i class="bi bi-github"></i> GitHub</a></p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Contacto Directo</h4>
+                  <p style="color: var(--text-muted); font-size: 14px;">Usa el formulario o conéctate por LinkedIn/GitHub</p>
                 </div>
               </div>
             </div>
@@ -877,6 +997,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Custom Theme JS -->
+  <script src="assets/js/custom-theme.js"></script>
 
 </body>
 
